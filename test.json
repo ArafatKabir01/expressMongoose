@@ -1,0 +1,26 @@
+{
+  "id": "string",
+  "name": {
+    "firstName": "string",
+    "middlename": "string",
+    "lastname": "string"
+  },
+  "adress": "string",
+  "phoneNomber": "string",
+  "email": "string",
+  "gender": "male",
+  "dateOfBirth": "number",
+  "bloodGroup": "'A+'",
+  "guardian": {
+    "fatherName": "string",
+    "fatherPhoneNo": "string",
+    "fatherOcopation": "string",
+    "motherName": "string",
+    "motherPhoneNo": "string",
+    "motherOcopation": "string"
+  },
+  "localGuardian": { "firstName": "string", "middlename": "string" },
+  "lastname": "string",
+  "profileImg": "string",
+  "isRegular": "regular"
+}
