@@ -1,10 +1,10 @@
-export type Guardain = {
+export type Guardian = {
   fatherName: string
   fatherPhoneNo: string
-  fatherOcopation: string
+  fatherOccupation: string
   motherName: string
   motherPhoneNo: string
-  motherOcopation: string
+  motherOccupation: string
 }
 export type Username = {
   firstName: string
@@ -18,13 +18,13 @@ export type LocalGuardian = {
 export interface Student {
   id: string
   name: Username
-  adress: string
+  address: string
   phoneNumber: string
   email: string
   gender: 'male' | 'female'
   dateOfBirth: number
   bloodGroup: 'A+' | 'B+' | 'A-' | 'B-' | 'O+' | 'O-' | 'AB+' | 'AB-'
-  guardian: Guardain
+  guardian: Guardian
   localGuardian: LocalGuardian
   profileImg: string
   isRegular: 'regular' | 'eregular'
