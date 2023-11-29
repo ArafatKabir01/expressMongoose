@@ -6,7 +6,8 @@
     "joi": "^17.11.0",
     "mongoose": "^8.0.1",
     "typescript": "^5.2.2",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+    "zod": "^3.22.4"
   },
   "scripts": {
     "start:pro": "node dist/server.js",

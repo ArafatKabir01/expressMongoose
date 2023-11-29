@@ -3,9 +3,9 @@ import { Schema, model } from 'mongoose'
 import {
   Guardian,
   LocalGuardian,
-  Student,
+  TStudent,
   Username,
-} from './student/student.interface'
+} from './student.interface'
 //Schema
 const userNameSchema = new Schema<Username>({
   firstName: {
@@ -35,6 +35,7 @@ const userNameSchema = new Schema<Username>({
 const guardian = new Schema<Guardian>({
   fatherName: { type: String, required: [true, 'Father name is required'] },
   fatherOccupation: String,
+  fatherPhoneNo: String,
   motherName: { type: String, required: [true, 'Mother name is required'] },
   motherOccupation: String,
   motherPhoneNo: String,
@@ -48,10 +49,16 @@ const localGuardian = new Schema<LocalGuardian>({
   phoneNomber: String,
 })
 
-const studentSchema = new Schema<Student>({
+const studentSchema = new Schema<TStudent>({
   id: {
     type: String,
     unique: true,
+    message: 'ID already exists',
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    unique: true,
+    required: true,
     message: 'ID already exists',
   },
   name: {
@@ -78,12 +85,7 @@ const studentSchema = new Schema<Student>({
   guardian: guardian,
   localGuardian: localGuardian,
   profileImg: String,
-  isRegular: {
-    type: String,
-    enum: ['regular', 'eregular'],
-    default: 'regular',
-  },
 })
 
 //Model
-export const Studentmodel = model<Student>('Student', studentSchema)
+export const Student = model<TStudent>('Student', studentSchema)

@@ -1,3 +1,5 @@
+import { Types } from 'mongoose'
+
 export type Guardian = {
   fatherName: string
   fatherPhoneNo: string
@@ -15,8 +17,9 @@ export type LocalGuardian = {
   name: Username
   phoneNomber: string
 }
-export interface Student {
+export interface TStudent {
   id: string
+  user: Types.ObjectId
   name: Username
   address: string
   phoneNumber: string
@@ -27,5 +30,4 @@ export interface Student {
   guardian: Guardian
   localGuardian: LocalGuardian
   profileImg: string
-  isRegular: 'regular' | 'eregular'
 }
