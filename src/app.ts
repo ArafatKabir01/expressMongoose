@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express from 'express'
 import { Application, Request, Response } from 'express-serve-static-core'
+import globalErrorHandler from './middleware/globalErrorHandle'
 import { StudentRouter } from './module/student/student.route'
 import { UserRouter } from './module/users/users.routes'
 
@@ -15,5 +16,6 @@ app.use('/', StudentRouter)
 app.get('/', (req: Request, res: Response) => {
   res.send('hello World!')
 })
+app.use(globalErrorHandler)
 
 export default app

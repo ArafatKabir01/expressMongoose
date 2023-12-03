@@ -6,6 +6,7 @@ import { User } from './users.model'
 
 const createStudent = async (password: string, studentData: TStudent) => {
   const userData: Partial<TUsers> = {}
+  console.log(studentData)
   userData.password = password || (config.default_pass as string)
   userData.role = 'student'
   userData.id = '202300030'
